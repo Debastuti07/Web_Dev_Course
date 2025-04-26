@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid darkblue;
+            /* width: 2048px; */
+            width: 80vw;
+            background-color: aquamarine;
+            margin: auto;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid darkblue;
+            /* width: 2048px; */
+            width: 100vw;
+            background-color: aquamarine;
+            margin: 23px auto;
+            height: 80vh;
+            font-size: 18px;
+        }
+        .container > p{
+            font-size: 2em;
+            width: 50%;
+            border: 2px blue solid;
+
+        }
+        .container>p>div{
+                    border: 2px solid black;
+                    width: 50%;
+        }
+        html{
+            font-size: 12px;
+        }
+        .mycont{
+            background-color: red;
+            color: aliceblue;
+            font-size: 22px;
+            width: 80vmin;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is a box</div>
+    <div class="container"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa facilis sed nobis hic, praesentium iure eligendi doloribus quam. Eligendi magni eum amet quis dolorum. Est deserunt repudiandae facere consequatur nobis commodi cum consequuntur unde, nihil magnam reiciendis non dolor eius rem harum, nesciunt neque! Commodi debitis, quibusdam aperiam harum neque ex tempora quae quam eos.</p></div>
+    <div class="mycont">I am another container </div>
+</body>
+</html>

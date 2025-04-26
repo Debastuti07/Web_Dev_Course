@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Multicolor Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --primart-color:#ad5afacc;
+            --text-color:white;
+            --seccolor:rgb(255, 134, 229);
+        }
+        body{
+            background-color: var(--seccolor);
+        }
+        nav{
+            background-color: var(--primart-color);
+            padding: 12px 0px;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 20px;
+            font-weight: 400 bolder;
+        }
+        
+        ul li a{
+            color:var(--text-color);
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
