@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- question 1 -->
+    <button id="btn1">btn 1</button>
+    <button id="btn2">btn 2</button>
+    <button id="btn3">btn 3</button>
+    
+
+    <!-- question 2 -->
+    <h2>My Bookmarks</h2>
+
+  <input id="siteName" placeholder="Site name" required>
+  <input id="siteURL" placeholder="https://example.com" required>
+  <button onclick="addBookmark()">Add</button>
+
+  <ul id="list"></ul>
+  
+
+   <!-- question 3 -->
+    <input id="site_Name" placeholder="Site name" required>
+  <input id="site_URL" placeholder="https://example.com" required>
+  <button id="addbtn">Add</button>
+
+  <ul id="new_list"></ul>
+
+
+  <!-- question 4 -->
+<h2>Auto-Fetch Content</h2>
+
+
+<!-- question 5 -->
+  <div id="bulb" class="bulb"></div>
+  <button id="toggleBtn">Toggle Bulb</button>
+  <style>
+    .bulb {
+      width: 100px;
+      height: 100px;
+      background-color: #444;
+      border-radius: 50%;
+      margin: 50px auto;
+      box-shadow: 0 0 10px #000;
+      transition: all 0.3s ease;
+    }
+
+    .glow {
+      background-color: yellow;
+      box-shadow: 0 0 30px yellow, 0 0 60px gold, 0 0 90px orange;
+    }
+
+    #toggleBtn {
+      display: block;
+      margin: auto;
+      padding: 10px 20px;
+      font-weight: bold;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+  </style>
+  
+    <script src="ch-8.js"></script>
+</body>
+</html>
