@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+</head>
+<body>
+   <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://imgs.search.brave.com/kqAiPtbiWw42Cga642qbt8kA2uRgPTLNRUV1y6wbVLo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y2l0eXBuZy5jb20v/cHVibGljL3VwbG9h/ZHMvcHJldmlldy9z/cG90aWZ5LXdoaXRl/LW5lb24tbG9nby1z/aWduLXBuZy03MDE3/NTE2OTQ3NzI1Nzlv/c2JqYTVmdHNtLnBu/Zw" alt="logo" id="logo">
+      <button id="home"><i class="fas fa-home"></i></button>
+    </div>
+    
+    <div class="search-container">
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="What do you want to play?">
+        <span class="icon clear-icon">🗑️</span>
+      </div>
+    </div>
+    
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="https://www.spotify.com/in-en/premium/" class="nav-link">Premium</a>
+        <a href="https://support.spotify.com/in-en/" class="nav-link">Support</a>
+        <a href="https://www.spotify.com/in-en/download/windows/" class="nav-link">Download</a>
+        <span class="divider">|</span>
+        <a href="https://open.spotify.com/download" class="nav-link" id="nav-link1">Install App</a>
+        <a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2Fdownload" class="nav-link" id="nav-link2">Sign Up</a>
+      </div>
+      <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F" class="login-btn">Log in</a>
+      <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+<div class="playlist-popup" id="playlistPopup" >
+        <div class="triangle"></div>
+        <h3>Create a playlist</h3>
+        <p>Log in to create and share playlists.</p>
+        <div class="popup-buttons">
+          <button id="notNow">Not now</button>
+          <button id="logIn"><a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2Fgenre%2Fsection0JQ5IMCbQBLva2NJWLXBai" style="color: black;font-weight: bold;text-decoration: none;">Log in</a></button>
+        </div>
+      </div>
+
+ <div class="container">
+    
+    <aside class="sidebar">
+      <div class="library-header">
+        <h4>Your Library</h4>
+        <button class="create-btn" id="symbol">+</button>
+        <div class="tooltip" id="tooltip">
+            <span class="icon">🎵</span>Create a new playlist</div>
+      </div>
+      
+      <div class="sidebar-cards">
+        <div class="sidebar-card">
+          <h3>Create your first playlist</h3>
+          <p>It's easy, we'll help you</p>
+          <button class="card-btn">Create playlist</button>
+        </div>
+        
+        <div class="sidebar-card">
+          <h3>Let's find some podcasts to follow</h3>
+          <p>We'll keep you updated on new episodes</p>
+          <button class="card-btn">Browse podcasts</button>
+        </div>
+      </div>
+
+
+
+
+
+ <div class="footer-links">
+         <a href="https://www.spotify.com/in-en/legal/end-user-agreement/">Legal</a>
+        <a href="https://www.spotify.com/in-en/safetyandprivacy">Safety & Privacy Center</a>
+        <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+        <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+        <a href="https://www.spotify.com/in-en/accessibility">Accessibility</a>
+        <a href="https://www.spotify.com/in-en/legal/cookies-policy/" target="_blank" id="footss" >Cookies</a>
+      </div>
+      
+      <button class="lang-btn">
+        <i class="fas fa-globe"></i>
+        <span class="lang-text">English</span>
+      </button>
+    </aside>
+
+
+    <main class="main-content">
+      <section class="section">
+        <div class="section-header">
+          <h2><a href="https://open.spotify.com/section/0JQ5DB5E8N831KzFzsBBQ2"></a>Trending Songs</h2>
+          <a href="https://open.spotify.com/section/0JQ5DB5E8N831KzFzsBBQ2" class="show-all">Show all</a>
+        </div>
+        
+        <div class="cards-container">
+          
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/3ETAyPs1TjEcYIpCbYwEbk?highlight=spotify:track:1D35BJlymlh6OLD75WupSF"><img src="https://imgs.search.brave.com/9BCEHgXBwhiKII-0Eq5l2-a3tcLHvtCufvjzGD0OeeI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8x/NzEvU2FpeWFhcmEt/RnJvbS1TYWl5YWFy/YS1IaW5kaS0yMDI1/LTIwMjUwNjEwMTQw/MzU1LTUwMHg1MDAu/anBn" alt="Saiyaara cover"></a>
+              <button class="play-btn" id="playButton1"><i class="fas fa-play"></i></button>
+            </div>
+            <audio id="audioPlayer1" src="Saiyaara.mp3"></audio>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/3ETAyPs1TjEcYIpCbYwEbk?highlight=spotify:track:1D35BJlymlh6OLD75WupSF">Saiyaara (From "Saiyaara")</a></h4>
+              <p>Tanishk Bagchi, Faheem Abdullah, Arslan Nizami...</p>
+            </div>
+          </div>
+          <div class="music-card" >
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/7oUQEGYiwyjH8OFCu5Y4IG?highlight=spotify:track:1GFQthxDi4Tqe3wJ5j0G5S"><img src="https://imgs.search.brave.com/mwzV4wLJSU_756yVz2J6oCRGrjC_rv_nfp6ukbn7mOs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnNj/ZG4uY28vaW1hZ2Uv/YWI2NzYxNmQwMDAw/YjI3Mzc4MWZhZjU5/YTNjYjk4MGZlM2I0/OTNmOA"alt="Dhun cover" style="width: 139.32px;height: 139.32px;"></a>
+              <button class="play-btn" id="playButton2"><i class="fas fa-play"></i></button>
+            </div>
+            <audio id="audioPlayer2" src="Dhun Saiyaara.mp3"></audio>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/7oUQEGYiwyjH8OFCu5Y4IG?highlight=spotify:track:1GFQthxDi4Tqe3wJ5j0G5S">Dhun (From "Saiyaara")</a></h4>
+              <p>Mithoon,Arijit Singh</p>
+            </div>
+          </div>
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/69oxllULO1PeIO1VHT97uk?highlight=spotify:track:6G8vN5EUtcDxOXOXadF6kp"><img src="https://imgs.search.brave.com/qFqMtW5SDK1U6EujGAjceJ9VqcQJSJIum3Q3EZqzJnk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hMTAu/Z2FhbmFjZG4uY29t/L2duX2ltZy9hbGJ1/bXMvdzRNS1BPYm9q/Zy9NS1A4cWpBR0tv/L3NpemVfbS5qcGc" alt="Tum Ho Toh cover" style="width: 139.32px;height: 139.32px;"></a>
+              <button class="play-btn" id="playButton3"><i class="fas fa-play"></i></button>
+            </div>
+            <audio id="audioPlayer3" src="Tum Ho Toh Saiyaara.mp3"></audio>
+            <div class="card-info">
+               <h4><a href="https://open.spotify.com/album/69oxllULO1PeIO1VHT97uk?highlight=spotify:track:6G8vN5EUtcDxOXOXadF6kp">Tum Ho Toh (From "Saiyaara")</a></h4>
+              <p>Vishal Mishra,Hansika Pareek,Raj Shekhar</p>
+            </div>
+          </div>
+       
+          
+      
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/27wFxpV56Pg7Uxk0GxNfoF?highlight=spotify:track:7Csa4PStpuYIfUqNMKQ4V8"><img src="https://imgs.search.brave.com/cl0hkm1_G4KX61ZInbiPe_bMbWpd2bmWjcufbvi0OyM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cGFnYWl3b3JsZC5j/b20vY292ZXJzL2Jh/cmJhYWRfNC5qcGc" alt="Barbaad cover" style="width: 139.32px;height: 139.32px;"></a>
+              <button class="play-btn" id="playButton4"><i class="fas fa-play"></i></button>
+            </div>
+            <audio id="audioPlayer4" src="Barbaad Saiyaara.mp3"></audio>
+            <div class="card-info">
+               <h4><a href="https://open.spotify.com/album/27wFxpV56Pg7Uxk0GxNfoF?highlight=spotify:track:7Csa4PStpuYIfUqNMKQ4V8">Barbaad (From "Saiyaara")</a></h4>
+              <p>The Rish,Jubin Nautiyal</p>
+            </div>
+          </div>
+          <div class="music-card">
+            <div class="card-img-container">
+               <a href="https://open.spotify.com/album/58Q1g74xDb9Lxv64Y68Z7S?highlight=spotify:track:0OLTYqD8FpjkLsxJmdWmgi"><img src="https://imgs.search.brave.com/92ufcV_E32uT6oKxUCXr0PRjAzfbPl7C8latGHKS67s/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hMTAu/Z2FhbmFjZG4uY29t/L2duX2ltZy9zb25n/L3pMcDM2UHZickcv/cDM2eGo1eTBici9z/aXplX21fMTc1MDg1/NTQwOS5qcGc" alt="Humsafar cover"style="width: 139.32px;height: 139.32px;"></a>
+              <button class="play-btn" id="playButton5"><i class="fas fa-play"></i></button>
+            </div>
+            <audio id="audioPlayer5" src="Humsafar Saiyaara.mp3"></audio>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/58Q1g74xDb9Lxv64Y68Z7S?highlight=spotify:track:0OLTYqD8FpjkLsxJmdWmgi">Humsafar (From "Saiyaara")</a></h4>
+              <p>Sachet-Parampara,Sachet Tandon,Parampara Tandon,Irshad Kamil</p>
+            </div>
+          </div>
+            <div class="music-card">
+            <div class="card-img-container">
+               <a href="https://open.spotify.com/album/250nGZusEhq33ZIZYJ7eVb?highlight=spotify:track:0eLtIxPRNJfsmehITZ1qaJ"><img src="https://imgs.search.brave.com/EXMd5PgQtuw-Mk-dWw0EOiNtzw_bJLCMELaUPfuSjhU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yYWFn/LmZtL2ltYWdlLzI1/MC8zMDc5NS9TYWhp/YmFfQWRpdHlhX1Jp/a2hhcmkuanBn" alt="Humsafar cover"style="width: 139.32px;height: 139.32px;"></a>
+              <button class="play-btn" id="playButton6"><i class="fas fa-play"></i></button>
+            </div>
+             <audio id="audioPlayer6" src="Sahiba.mp3"></audio>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/250nGZusEhq33ZIZYJ7eVb?highlight=spotify:track:0eLtIxPRNJfsmehITZ1qaJ">Sahiba</a></h4>
+              <p>Aditya Rikhari</p>
+            </div>
+          </div>
+          <div class="music-card">
+            <div class="card-img-container">
+              <img src="ChatGPT Image Aug 2, 2025, 09_35_57 PM.png" alt="Hridoy cover">
+              <button class="play-btn" id="playButton7"><i class="fas fa-play"></i></button>
+            </div>
+            <audio id="audioPlayer7" src="My-love.mp3"></audio>
+            <div class="card-info">
+              <h4 class="name">Hriday</h4>
+              <p>Phantom(Mainak Bhowmick)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+       <section class="section">
+        <div class="section-header">
+          <h2>Popular Artists</h2>
+          <a href="https://open.spotify.com/section/0JQ5DAnM3wGh0gz1MXnu3C" class="show-all">Show all</a>
+        </div>
+        
+        <div class="cards-container">
+         
+          <div class="artist-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU"><img src="https://images.hindustantimes.com/img/2022/12/02/550x309/10b0af92-c9e6-11eb-b0cf-a00e9b339624_1623773585766_1669976206240_1669976206240.jpg" alt="Pritam Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal1')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU">Pritam</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal1">
+  <div class="modal-content" id="modal-content1">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://images.hindustantimes.com/img/2022/12/02/550x309/10b0af92-c9e6-11eb-b0cf-a00e9b339624_1623773585766_1669976206240_1669976206240.jpg" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+         
+
+
+
+
+<div class="artist-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw"><img src="https://imgs.search.brave.com/FoH4J-iq7vYj3n92NAhlRJEzxTaizFc5iRLuS-aRX1o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS9h/cnRpc3RzL0FyaWpp/dF9TaW5naF8wMDRf/MjAyNDExMTgwNjM3/MTdfNTAweDUwMC5q/cGc" alt="Arijit Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal2')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw">Arijit Singh</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal2">
+  <div class="modal-content" id="modal-content2">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/FoH4J-iq7vYj3n92NAhlRJEzxTaizFc5iRLuS-aRX1o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS9h/cnRpc3RzL0FyaWpp/dF9TaW5naF8wMDRf/MjAyNDExMTgwNjM3/MTdfNTAweDUwMC5q/cGc" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="artist-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/artist/2oSONSC9zQ4UonDKnLqksx"><img src="https://imgs.search.brave.com/-GCI2ZkEpO072ZlY3E6s74D92mpkmeVv0t2Rmmp6ySc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQwMDA5/NTQuanBn" alt="Atif Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal3')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="https://open.spotify.com/artist/2oSONSC9zQ4UonDKnLqksx">Atif Aslam</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal3">
+  <div class="modal-content" id="modal-content3">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/-GCI2ZkEpO072ZlY3E6s74D92mpkmeVv0t2Rmmp6ySc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQwMDA5/NTQuanBn" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="artist-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/artist/1mYsTxnqsietFxj1OgoGbG"><img src="https://imgs.search.brave.com/eJmK-TvJjDzB_PQXdW4rz-iLOi1lhhLtSY2WywMm2Ug/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mcmFt/ZXJ1c2VyY29udGVu/dC5jb20vaW1hZ2Vz/L283UlNFcG9hODds/SWVUTGkwSlFFTHFM/S1hsRS5qcGc" alt="A.R.Rahman Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal4')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="https://open.spotify.com/artist/1mYsTxnqsietFxj1OgoGbG">A.R.Rahman</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal4">
+  <div class="modal-content" id="modal-content4">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/eJmK-TvJjDzB_PQXdW4rz-iLOi1lhhLtSY2WywMm2Ug/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mcmFt/ZXJ1c2VyY29udGVu/dC5jb20vaW1hZ2Vz/L283UlNFcG9hODds/SWVUTGkwSlFFTHFM/S1hsRS5qcGc" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="artist-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy"><img src="https://imgs.search.brave.com/WQdF5e_onsUiFVF_J8BWgnOHUn6wHeZXB2BynXzYXYk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnNj/ZG4uY28vaW1hZ2Uv/YWI2NzYxNjEwMDAw/ZTVlYjU5MzAzZDU0/Y2U3ODkyMTBlNzQ1/ZTFhOQ" alt="Shreya Ghoshal Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal5')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy">Shreya Ghoshal</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal5">
+  <div class="modal-content" id="modal-content5">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/WQdF5e_onsUiFVF_J8BWgnOHUn6wHeZXB2BynXzYXYk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnNj/ZG4uY28vaW1hZ2Uv/YWI2NzYxNjEwMDAw/ZTVlYjU5MzAzZDU0/Y2U3ODkyMTBlNzQ1/ZTFhOQ" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="artist-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/artist/7dRb6HiP61D58Smxtznxrd"><img src="https://imgs.search.brave.com/TaAFrGfkV9_lmq81U1jtMvZlOx6Jz8MRDCrYoudigco/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnNj/ZG4uY28vaW1hZ2Uv/YWI2NzYxNjEwMDAw/ZTVlYjQ2N2QyNzM1/OTBmNzU3ZDBhMzQ3/YTlkMw" alt="Shohan Ali Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal6')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="https://open.spotify.com/artist/7dRb6HiP61D58Smxtznxrd">Sohan Ali</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal6">
+  <div class="modal-content" id="modal-content6">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/TaAFrGfkV9_lmq81U1jtMvZlOx6Jz8MRDCrYoudigco/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnNj/ZG4uY28vaW1hZ2Uv/YWI2NzYxNjEwMDAw/ZTVlYjQ2N2QyNzM1/OTBmNzU3ZDBhMzQ3/YTlkMw" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="artist-card">
+            <div class="card-img-container">
+              <a href="#"><img src="WhatsApp Image 2025-08-03 at 02.31.23.jpeg" alt="Phantom Artist" class="round-img"></a>
+              <button class="play-btn"onclick="openModal('popupModal7')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4 class="singerName"> <a href="#">Phantom</a></h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="custom-modal" id="popupModal7">
+  <div class="modal-content" id="modal-content7">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="WhatsApp Image 2025-08-03 at 02.31.23.jpeg" alt="Artist" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </section>
+      
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Popular albums and singles</h2>
+          <a href="https://open.spotify.com/section/0JQ5DAnM3wGh0gz1MXnu3B" class="show-all">Show all</a>
+        </div>
+        
+        <div class="cards-container">
+         
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/0Rkv5iqjF2uenfL0OVB8hg"><img src="https://imgs.search.brave.com/Wb7oXspH-rMHvlrcKBejWoqLbNabf-p1poo3J17v0IE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/NC80Zi9BYXNoaXF1/aV8yLmpwZWcvMjUw/cHgtQWFzaGlxdWlf/Mi5qcGVn" alt="Ashique 2 cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal8')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/0Rkv5iqjF2uenfL0OVB8hg">Ashique 2</a></h4>
+              <p>Mithoon,Ankit Tiwari,Jeet Gannguli</p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal8">
+  <div class="modal-content" id="modal-content8">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/Wb7oXspH-rMHvlrcKBejWoqLbNabf-p1poo3J17v0IE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/NC80Zi9BYXNoaXF1/aV8yLmpwZWcvMjUw/cHgtQWFzaGlxdWlf/Mi5qcGVn" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/2Lxoc72vRTGdQfMvj7Ovi1"><img src="https://imgs.search.brave.com/45dAAu7mcrA8JqFK__ACY1ueb4aG3_O2BWtYsa0NeWg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vMS8xZC9Z/ZWhfSmF3YWFuaV9I/YWlfRGVld2FuaV9T/b3VuZHRyYWNrLmpw/Zw" alt="yeh jawaani hai deewani cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal9')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/2Lxoc72vRTGdQfMvj7Ovi1">Yeh Jawaani Hai Deewani</a></h4>
+              <p>Pritam</p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal9">
+  <div class="modal-content" id="modal-content9">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/45dAAu7mcrA8JqFK__ACY1ueb4aG3_O2BWtYsa0NeWg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vMS8xZC9Z/ZWhfSmF3YWFuaV9I/YWlfRGVld2FuaV9T/b3VuZHRyYWNrLmpw/Zw" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/69xcXWqK1aN73KgVA2i3Zq"><img src="https://imgs.search.brave.com/cCljUCuY5DJ13P0US3NfqdYWucYZ0OdO3oQRFv2d5zU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8w/NjcvRmluZGluZy1I/ZXItSGluZGktMjAy/NS0yMDI1MDEwNDE5/MDY0My01MDB4NTAw/LmpwZw" alt="finding her cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal10')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/69xcXWqK1aN73KgVA2i3Zq">Finding Her</a></h4>
+              <p>Kushagra, Bharath, Saaheal </p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal10">
+  <div class="modal-content" id="modal-content10">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/cCljUCuY5DJ13P0US3NfqdYWucYZ0OdO3oQRFv2d5zU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8w/NjcvRmluZGluZy1I/ZXItSGluZGktMjAy/NS0yMDI1MDEwNDE5/MDY0My01MDB4NTAw/LmpwZw" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/4Qhs9M8b7MafoxTPhfG6Hq"><img src="https://imgs.search.brave.com/WzeaDbd_v4vG_IKVRzbD-JRpIfOT-wWoBmvI5ZltRiE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLTRzeWpS/cUh2MTJVbkp6MHQt/d0t6QkJnLXQxMDgw/eDEwODAuanBn" alt="Young G.O.A.T cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal11')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/4Qhs9M8b7MafoxTPhfG6Hq">Young G.O.A.T</a></h4>
+              <p>Cheema Y,Gur Sidhu </p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal11">
+  <div class="modal-content" id="modal-content11">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/WzeaDbd_v4vG_IKVRzbD-JRpIfOT-wWoBmvI5ZltRiE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLTRzeWpS/cUh2MTJVbkp6MHQt/d0t6QkJnLXQxMDgw/eDEwODAuanBn" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/track/7n6AQKpZUGiJM2auF3yuDY"><img src="https://imgs.search.brave.com/psJP-kdtHkPt2aGSEo6Q455NpRKMSTNXFO8Ks8zpsQQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yYWFn/LmZtL2ltYWdlLzI1/MC8xNTE0NzA0L0Fs/bF9CbGFja19SYWZ0/YWFyLFN1a2gtRV9N/dXppY2FsX0RvY3Rv/cnouanBn" alt="All back cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal12')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/track/7n6AQKpZUGiJM2auF3yuDY">All Back</a></h4>
+              <p>Raftaar</p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal12">
+  <div class="modal-content" id="modal-content12">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/psJP-kdtHkPt2aGSEo6Q455NpRKMSTNXFO8Ks8zpsQQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yYWFn/LmZtL2ltYWdlLzI1/MC8xNTE0NzA0L0Fs/bF9CbGFja19SYWZ0/YWFyLFN1a2gtRV9N/dXppY2FsX0RvY3Rv/cnouanBn" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/0T3OBJ8xrLm9f4hSpkNSL6"><img src="https://imgs.search.brave.com/1uvldjs5vrzWMWDdEtcy4AwinAKd8gZAGLmaMz77PRw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zb3Vy/Y2UuYm9vbXBsYXlt/dXNpYy5jb20vZ3Jv/dXAxMC9NMDAvMDIv/MjAvYjMwZjliYzMx/OTJjNGRjNWIxNjA0/OWU4MDQzNWNmMjJf/NDY0XzQ2NC5qcGc" alt="Onno Groher Chand cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal13')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/0T3OBJ8xrLm9f4hSpkNSL6">Onno Groher Chand</a></h4>
+              <p>Sohan Ali</p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal13">
+  <div class="modal-content" id="modal-content13">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/1uvldjs5vrzWMWDdEtcy4AwinAKd8gZAGLmaMz77PRw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zb3Vy/Y2UuYm9vbXBsYXlt/dXNpYy5jb20vZ3Jv/dXAxMC9NMDAvMDIv/MjAvYjMwZjliYzMx/OTJjNGRjNWIxNjA0/OWU4MDQzNWNmMjJf/NDY0XzQ2NC5qcGc" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/album/3OxfaVgvTxUTy7276t7SPU"><img src="https://imgs.search.brave.com/hGSGO1T-I5flxkvkZDQE5qSGJyof8SMBGe-oLKnKXzc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLTN2MWxs/YzZQeEhYRy0wLXQx/MDgweDEwODAuanBn" alt="Hurry Up Tomorrow cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal14')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              <h4><a href="https://open.spotify.com/album/3OxfaVgvTxUTy7276t7SPU">Hurry Up Tomorrow</a></h4>
+              <p>The Weeknd</p>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal14">
+  <div class="modal-content" id="modal-content14">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/hGSGO1T-I5flxkvkZDQE5qSGJyof8SMBGe-oLKnKXzc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLTN2MWxs/YzZQeEhYRy0wLXQx/MDgweDEwODAuanBn" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header">
+          <h2>Popular radio</h2>
+          <a href="https://open.spotify.com/section/0JQ5DAnM3wGh0gz1MXnu4h" class="show-all">Show all</a>
+        </div>
+        
+        <div class="cards-container">
+         
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4oJSdHZrVjxD"><img src="https://imgs.search.brave.com/lxZeaGFSKokK5qvL7vEmh2colApD6P68RKDcXEM6VxU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9waWNr/YXNzby5zcG90aWZ5/Y2RuLmNvbS9pbWFn/ZS9hYjY3YzBkZTAw/MDBkZWVmL2R0L3Yx/L2ltZy9yYWRpby9h/cnRpc3QvNFlSeERW/OHdKRlBIUFRlWGVw/T3N0dy9lbg" alt="Arijit cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal15')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With Sachin-Jigar, Jeet 
+Gannguli, Atif Aslam and more</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal15">
+  <div class="modal-content" id="modal-content15">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="https://imgs.search.brave.com/lxZeaGFSKokK5qvL7vEmh2colApD6P68RKDcXEM6VxU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9waWNr/YXNzby5zcG90aWZ5/Y2RuLmNvbS9pbWFn/ZS9hYjY3YzBkZTAw/MDBkZWVmL2R0L3Yx/L2ltZy9yYWRpby9h/cnRpc3QvNFlSeERW/OHdKRlBIUFRlWGVw/T3N0dy9lbg" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4xzuMPqbCJfm"><img src="image.png" alt="KK cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal16')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With Pritam, Mustafa 
+Zahid, Shaan and more</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal16">
+  <div class="modal-content" id="modal-content16">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="image.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4vqXjPu7Hg0z"><img src="Screenshot 2025-08-03 173331.png" alt="Shreya Ghoshal cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal17')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With A.R. Rahman,
+Salim–Sulaiman, Ajay-Atul and more
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal17">
+  <div class="modal-content" id="modal-content17">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 173331.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4AnYVmEEo8ws"><img src="Screenshot 2025-08-03 173734.png" alt="Diljit cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal18')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With Karan Aujla, Sidhu 
+Moose Wala, AP Dhillon and more
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal18">
+  <div class="modal-content" id="modal-content18">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 173734.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4mZvA09hvuJo"><img src="Screenshot 2025-08-03 174536.png" alt="Honey Singh cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal19')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With Hariharan, G. V. 
+Prakash, Sid Sriram and more
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal19">
+  <div class="modal-content" id="modal-content19">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 174536.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4BklxwcWYhxG"><img src="Screenshot 2025-08-03 181109.png" alt="G.V prakash cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal20')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With Harrdy Sandhu,
+Sachin-Jigar, Alfaaz and more
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal20">
+  <div class="modal-content" id="modal-content20">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 181109.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1E4l7wP8UvYxXj"><img src="Screenshot 2025-08-03 181841.png" alt="A.R.Rahman cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal21')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>With Harris Jayaraj, Sean
+Roldan, Devi Sri Prasad and more
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal21">
+  <div class="modal-content" id="modal-content21">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 181841.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </section>
+
+ <section class="section">
+        <div class="section-header">
+          <h2>Featured Charts</h2>
+          <a href="https://open.spotify.com/section/0JQ5DAzQHECxDlYNI6xD1g" class="show-all">Show all</a>
+        </div>
+        
+        <div class="cards-container">
+         
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF"><img src="Screenshot 2025-08-03 185942.png" alt="global cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal22')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Your weekly update of the
+most played tracks right now - Global.</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal22">
+  <div class="modal-content" id="modal-content22">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 185942.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZEVXbMWDif5SCBJq"><img src="Screenshot 2025-08-03 190612.png" alt="india cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal23')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Your weekly update of the
+most played tracks right now - Global.</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal23">
+  <div class="modal-content" id="modal-content23">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 190612.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF"><img src="Screenshot 2025-08-03 192956.png" alt="daily global cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal24')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Your daily update of the 
+most played tracks right now - Global.</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal24">
+  <div class="modal-content" id="modal-content24">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 192956.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZEVXbLZ52XmnySJg"><img src="Screenshot 2025-08-03 193631.png" alt="daily india cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal25')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Your daily update of the
+most played tracks right now - India</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal25">
+  <div class="modal-content" id="modal-content25">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 193631.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZEVXbLiRSasKsNU9"><img src="Screenshot 2025-08-03 195220.png" alt="daily global cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal26')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Your daily update of the
+most viral tracks right now - Global.</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal26">
+  <div class="modal-content" id="modal-content26">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 195220.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZEVXbK4NvPi6Sxit"><img src="Screenshot 2025-08-03 195759.png" alt="daily india cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal27')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Your daily update of the
+most viral tracks right now - India.</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal27">
+  <div class="modal-content" id="modal-content27">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 195759.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+      </section>
+
+
+
+
+
+      <section class="section">
+        <div class="section-header">
+          <h2>India's Best</h2>
+          <a href="https://open.spotify.com/section/0JQ5DAuChZYPe9iDhh2mJz" class="show-all">Show all</a>
+        </div>
+        
+        <div class="cards-container">
+         
+          <div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DX0XUfTFmNBRM"><img src="Screenshot 2025-08-03 202502.png" alt="hottest hindi songs cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal28')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Hottest Hindi music 
+that India is listening to. Cover - Saiyaara
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal28">
+  <div class="modal-content" id="modal-content28">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 202502.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DX1ct2TQrAvRf"><img src="Screenshot 2025-08-03 203056.png" alt="rap cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal29')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>India's Rap Scene.Cover 
+- DIVINE
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal29">
+  <div class="modal-content" id="modal-content29">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 203056.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DWXkMnNwaapIj"><img src="Screenshot 2025-08-03 203450.png" alt="ipop cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal30')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Hottest tracks from 
+your favourite I-Pop Icons. Cover- Asees Kaur
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal30">
+  <div class="modal-content" id="modal-content30">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 203450.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DWXVJK4aT7pmk"><img src="Screenshot 2025-08-03 203958.png" alt="punjabi songs cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal31')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Catch the hottest Pun
+jabi tracks. Cover - Karan Aujla
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal31">
+  <div class="modal-content" id="modal-content31">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 203958.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DX5q67ZpWyRrZ"><img src="Screenshot 2025-08-03 205027.png" alt="indie songs cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal32')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>Best of the Indian Indie
+scene. Cover - Faheem Abdullah
+</pre>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal32">
+  <div class="modal-content" id="modal-content32">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 205027.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="music-card">
+            <div class="card-img-container">
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DX5VOFoIqmrOV"><img src="Screenshot 2025-08-03 205538.png" alt="telegu songs cover"></a>
+              <button class="play-btn" onclick="openModal('popupModal33')"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="card-info">
+              
+              <pre>The finest set of Telugu
+music from the past 10 years. Cover : Pushpa 2
+            </div>
+          </div>
+
+          <div class="custom-modal" id="popupModal33">
+  <div class="modal-content" id="modal-content33">
+    <span class="close-text-btn" onclick="closeModal()">close</span>
+    <div class="modal-body">
+      <img src="Screenshot 2025-08-03 205538.png" alt="AlbumSongs" class="modal-img">
+
+      <div class="modal-text">
+        <p class="popup-heading">Start listening with a free spotify account</p>
+        <button class="green-btn"><a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F%23login" style="text-decoration: none;
+        color: black;font-weight: bold;">Sign up free</a></button>
+        <button class="gray-btn"><a href="https://www.spotify.com/in-en/download/windows/?referrer=dwp" style="text-decoration: none;color:white;">Download app</a></button>
+        <p class="login-link">Already have an account? <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F%23login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+      </section>
+      <hr>
+<br><br><br>
+       <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Communities</th>
+                        <th>Useful links</th>
+                        <th>Spotify Plans</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.spotify.com/in-en/about-us/contact/">About</a></td>
+                        <td><a href="https://artists.spotify.com/home">For Artists</a></td>
+                        <td><a href="https://support.spotify.com/in-en/">Support</a></td>
+                        <td><a href="https://www.spotify.com/in-en/premium/#ref=spotifycom_footer_premium_individual">Premium Individual</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.lifeatspotify.com/">Jobs</a></td>
+                        <td><a href="https://developer.spotify.com/">Developers</a></td>
+                        <td><a href="https://www.spotify.com/in-en/free/">Free Mobile App</a></td>
+                        <td><a href="https://www.spotify.com/in-en/duo/#ref=spotifycom_footer_premium_duo">Premium Duo</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://newsroom.spotify.com/">For the Record</a></td>
+                        <td><a href="https://ads.spotify.com/en-IN/">Advertising</a></td>
+                        <td><a href="https://open.spotify.com/popular-in/in">Popular by Country</a></td>
+                        <td><a href="https://www.spotify.com/in-en/family/#ref=spotifycom_footer_premium_family">Premium Family</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"></a></td>
+                        <td><a href="https://investors.spotify.com/home/default.aspx">Investors</a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="https://www.spotify.com/in-en/student/#ref=spotifycom_footer_premium_student">Premium Student</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"></a></td>
+                        <td><a href="https://spotifyforvendors.com/">Vendors</a></td>
+                        <td><a href="#"></a></td>
+                        <td><a href="https://www.spotify.com/in-en/free/#ref=spotifycom_footer_free">Spotify Free</a></td>
+                    </tr>
+                     <div class="stats">
+            <div class="stat-card">
+                <a href="https://www.instagram.com/spotify/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="stat-card">
+                 <a href="https://x.com/spotify" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="stat-card">
+                 <a href="https://www.facebook.com/Spotify"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        </div>
+                </tbody>
+            </table>
+            <br> <br> <hr>
+            <br> 
+           <footer>
+            <p class="last-footer">© 2025 Spotify AB</p>
+            <br><br><br>
+        </footer>
+       </div>
+
+    </main>
+    
+ </div>
+  
+
+     <script src="script.js"></script>
+</body>
+</html>
