@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "type": "module",
+  "type":"commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^20.1.5",
+    "express": "^5.1.0"
+  }
 }
